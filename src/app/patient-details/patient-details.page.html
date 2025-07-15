@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Patient Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="infoHere">
+    <ion-list>
+      <ion-item>
+        <ion-label>Name: {{patient.firstName}} {{patient.lastName}}</ion-label>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Phone Number (+971): {{patient.phoneNumber}}</ion-label>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Height: {{patient.Information.height}} cm</ion-label>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Weight: {{patient.Information.weight}} kg</ion-label>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Blood Pressure: {{patient.Information.bp}}</ion-label>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Temperature: {{patient.Information.temp}}</ion-label>
+      </ion-item>
+
+
+      <ion-list>
+        <h3 position="floating">Symptoms</h3>
+        <ion-item *ngFor="let symptom of symptoms">
+          <ion-label>{{symptom.name}}</ion-label>
+          <ion-checkbox disabled = "true" slot="end" [(ngModel)]="symptom.isChecked"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click) = "Prescription()" color="danger" expand="block">Prescribe Medicine</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button [routerLink]= "['/schedule-visits']" (click) = "ScheduleVisit()" color="danger" expand="block">Visit Patient</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-list *ngIf="prescriptionButton" >
+        <ion-item>
+           <ion-label >Prescription</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-textarea [(ngModel)]= "prescription" placeholder="Type in the prescription..."></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-button (click) = "AddMedicine()" expand="block">Submit</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+</ion-content>

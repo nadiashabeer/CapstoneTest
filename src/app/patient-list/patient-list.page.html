@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Patients List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button (click)="goToDetail(p.$key)" *ngFor="let p of patientList">
+      <ion-icon size="small" slot="start" name="person-outline"></ion-icon>
+      {{p.firstName}} {{p.lastName}} - {{p.phoneNumber}}
+    </ion-item>
+  </ion-list>
+  <ion-button [routerLink]="['/schedule-visits']"  expand="block" color="danger">VISIT SCHEDULE</ion-button>
+</ion-content>

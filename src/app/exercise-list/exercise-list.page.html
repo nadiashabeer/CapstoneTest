@@ -1,0 +1,97 @@
+<ion-app>
+  <ion-split-pane when="sm" contentId="main-content">
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Nadia Shabeer</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-list-header>
+            Patient Reference Number #129232
+          </ion-list-header>
+          <ion-menu-toggle [autoHide]="false">
+            <ion-item button>
+              <ion-icon slot="start" name='profile'></ion-icon>
+              <ion-label>
+                Profile
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="start" name='notes'></ion-icon>
+              <ion-label>
+                Doctors Notes
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="start" name='progress'></ion-icon>
+              <ion-label>
+                Progress
+              </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="start" name='exercises'></ion-icon>
+              <ion-label>
+                Exercises
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-toggle>
+              <ion-button>
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+              </ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+          <ion-title>Profile</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="ion-padding">
+        <h1>Nadia Shabeer</h1>
+        <img src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-vector-260nw-1725655669.jpg" alt="Profile Picture">
+        <h2>Patient ID: #123</h2>
+        <ion-card [routerLink]="['/user-data']">
+          <ion-card-header>
+            <ion-card-subtitle>exercise 1</ion-card-subtitle>
+            <ion-card-title>Shoulder Flextion Exercise</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+        </ion-card>
+        <ion-card [routerLink]="['/user-data']">
+          <ion-card-header>
+            <ion-card-subtitle>exercise 2</ion-card-subtitle>
+            <ion-card-title>Shoulder Abduction Exercise</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+        </ion-card>
+        <ion-card [routerLink]="['/user-data']">
+          <ion-card-header>
+            <ion-card-subtitle>exercise 3</ion-card-subtitle>
+            <ion-card-title>Shoulder Mextion Exercise</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </div>
+
+  </ion-split-pane>
+</ion-app>

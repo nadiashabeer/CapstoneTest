@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Scheduled Visits</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <!-- <ion-item *ngFor="let location of locationList">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Latitude: {{location.latitude}} , Longitude: {{location.longitude}}</ion-card-subtitle>
+          <ion-card-title class="{{determineClass(location)}}" >Name: {{location.name}} , Phone Number : {{location.phoneNo}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <h2>Country: {{location.countryName}}</h2>
+          <h2>City: {{location.administrativeArea}}</h2>
+          <h2>Region: {{location.subLocality}}</h2>
+          <a [href]="location.safeURLString"><h3>Address: {{location.address}} </h3></a>
+          <p>created on {{location.dateLocationAdded | date}}</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-button (click)="Visited(location)" disabled="{{buttonState(location)}}" color="{{buttonColor(location)}}" slot="end"> Visited </ion-button>
+    </ion-item> -->
+  </ion-list>
+</ion-content>
